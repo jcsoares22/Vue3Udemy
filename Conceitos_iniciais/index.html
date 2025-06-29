@@ -7,35 +7,36 @@
     <title>Curso Vue 3</title>
     <link rel="stylesheet" href="./assets/styles.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
 </head>
 
-
 <body>
-    <Ldiv id="app">
+    <div id="app">
         <div class="product-display">
-            <div class=" product-container">
+            <div class="product-container">
                 <div class="product-image">
-                    <img src=" alt=" img-product">
+                    <img :src="image" alt="img-product" />
                 </div>
                 <div class="product-info">
-                    <h1>t-sirt</h1>
+                    <h1>t-shirt</h1>
                     <h2>in stock</h2>
                 </div>
             </div>
-
         </div>
-        </div>
-        <script>
-            const app = Vue.createApp({
-                data() {
-                    return {
-                        mensagem: 'Olá, Vue 3!'
-                    }
-                },
+    </div>
 
-            }).mount('#app');
-        </script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    mensagem: 'Olá, Vue 3!',
+                    image: "./assets/images/t-shirt.png",
+
+                };
+            }
+        });
+
+        app.mount('#app');
+    </script>
 </body>
 
 </html>
